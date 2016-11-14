@@ -1,0 +1,24 @@
+<div class="template">
+	<div class="container">
+		<p><h3>Pollo o Tacchino</h3>in questa parte sono raccolte le ricette che vede come principale alimento il pollo o il tacchino</p>
+			<div class="row">				
+				<div ng-repeat="bird in birds">
+					<div class="groove">
+					<div class="col-md-4">
+						<img class="img-thumbnail" width="304" height="236" ng-src="{{bird.imageUrl}}">
+					</div>
+					<div class="col-md-8">
+						<h4>{{bird.name}}</h4>
+						<p>Ingredienti: {{bird.ingredienti}}</p>
+						<p>Tempo di preparazione: {{bird.tempo}}</p>
+						<p>Preparazione: {{bird.preparazione}}</p><br>
+					</div>
+					<ul class="pager">
+						<li><a class="likes" ng-click="onePlus($index)"> LIKE: {{bird.like}}</a></li>
+						<li><a href="#/">FATTO</a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+	</div>
+</div>
