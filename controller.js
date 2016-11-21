@@ -23,7 +23,7 @@ app.controller('secondiContr', function($scope, $http) {
 	});
 });
 
-//controller pollo o tacchino
+//definizione controller bird 
 app.controller('birdContr', function($scope, $http) {
 	$http.get('js/fileJson/birds.json').success(function(data) {
 		$scope.birds=data;
