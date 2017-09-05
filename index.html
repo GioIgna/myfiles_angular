@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html  ng-app="myApp">
+<!-- definizione intestazione -->
+<head>
+
+	<!-- Formato testo e informazioni aggiuntive-->    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROGETTO CUCINA</title>
+
+    <!-- importazione css tramite CDN e file css-->    
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Importazione angular tramite CDN e file js-->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controller/controller.js"></script>
+
+</head>
+<body ng-controller="contr">
+    <!--Prima riga di navigazione -->
+    <div class="nav">
+      <div class="container">
+        <ul class="pull-left">
+          <li><a href="#">Name</a></li>
+          <li><a href="#">Browse</a></li>
+        </ul>
+        <ul class="pull-right">
+          <li><a href="#">Sign Up</a></li>
+          <li><a href="#">Log In</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Parte centrale PRINCIPALE -->
+    <div class="jumbotron">
+      <div class="container">
+        <!--<h1>Progetto Cucina</h1>
+        <p>La mia passione per la cucina mi ha portato a condividere ciò che ho imparato negli anni e a renderla disponibile con chiunque voglia attraverso questo blog. Potete spulciare tutte le ricette che desiderate.</p>
+        <a href="#">Buon divertimento</a>-->
+      </div>
+    </div>
+    
+    <!-- Dedicata alle sezioni -->
+    <div class="vettore-ricette">
+     <div class="container">
+        <h2>RICETTE</h2>
+        <p>Le ricette sono divise per portata, scegli la sezione dedicata e di tuo interesse, poi scorri in basso per vedere le schede.</p>
+        <div class="row">
+            <div class="col-md-4">                          
+                <div class="thumbnail"><!--1 PRIMI-->
+                    <a href="#primi"><img src="http://originalfooditaly.com/img/cms/5.jpg">
+                    <p>Primi Piatti</p></a>
+                </div>
+                <div class="thumbnail"><!--2 PESCE-->
+                    <a href="#secondi"><img src="http://d19725nybt5uyn.cloudfront.net/wp-content/uploads/pesce-ristorante1.jpg"><p>Pesce</p></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail"><!--3 POLLO-->
+                    <a href="#bird"><img src= "http://www.risparmioincasa.it/wp-content/uploads/2014/06/pollo-alla-birra.jpg"><p>Pollo o Tacchino</p></a>
+                </div>
+                <div class="thumbnail"><!--4 RISOTTI-->
+                    <a href="#"><img src="http://d35obg07bzmh9h.cloudfront.net/wp-content/uploads/2011/08/risotto-ai-carciofi.jpg"><p>Risotti</p></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail"><!--5 CARNE-->
+                    <a href="#"><img src="http://farm8.staticflickr.com/7028/6563695171_e8636b5937_o.jpg"><p>Secondi di carne</p></a>
+                </div>
+                <div class="thumbnail"><!--6 DOLCI-->
+                    <a href="#"><img src="http://www.eticamente.net/wp-content/uploads/2014/09/olio-di-palma-biscotti-e-merendine.png"><p>Dolci</p></a>
+                </div>
+            </div>
+            <div ng-view></div>
+        </div>
+     </div>
+    </div>
+    <!--fine dedicata alle sezioni -->
+
+    <!--gestione ricette -->
+    <div class="learn-more">
+    <div class="container">
+      <h2>Gestione ricette</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Insert ricetta</h3>
+            <p>Inserisci un ricetta.</p>
+              <!--METODO DI INSERIMENTO DI UNA RICETTA -->
+            <p><a href="js/fileJson/insert.html">Inserisci la ricetta</a></p>
+          </div>
+          <div class="col-md-4">
+            <h3>Modific ricetta</h3>
+            <p>Modifica una ricetta.</p>
+            <p><a href="#">Visualizza la ricetta e modifica</a></p>
+          </div>
+          <div class="col-md-4">
+            <h3>Elimina argomento</h3>
+            <p>Elimina un argomento.</p>
+            <p><a href="#">Visualizza la ricetta ed effettua l'eliminazione</a></p>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- fine gestione argomenti -->
+
+  <!-- footer, informazioni di contatto -->
+    <footer>
+        <div class="nav">
+            <div class="info" >
+                <ul class="pull-left">
+                    <li>Posted by: Ignazio Santacaterina</li>
+                </ul>
+                <ul class="pull-right">
+                    <li>Contact information: <a href="mailto:ignazio.santacaterina.79@gmail.com">ignazio.santacaterina.79@gmail.com</a>.</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>
